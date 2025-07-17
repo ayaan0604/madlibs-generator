@@ -53,3 +53,10 @@ def fill_story(story:str,inputs:dict):
     
     return story
 
+def get_placeholder_names(placeholders:list):
+    names=[]
+    for placeholder in placeholders:
+        names.append(placeholder["placeholder"])
+    
+    return names
+

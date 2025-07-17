@@ -1,0 +1,82 @@
+/* General Reset and Font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* Titles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff416c;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 8px 0 20px;
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    width: 80%;
+    text-align: left;
+}
+
+/* Story Output */
+p {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}

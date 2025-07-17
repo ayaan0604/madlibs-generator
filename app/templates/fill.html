@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Your Choices</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Fill the choices below</h1>
+    <form action="/result" method="post">
+        <input name =id type="hidden" value="{{id}}"></br>
+        {% for name in placeholderNames %}
+        <label>{{name.capitalize()}}</label>
+        <input type="text" name="{{name}}" required placeholder="Enter a {{name}}"><br>
+        {% endfor %}
+        <button type="submit">Get your story</button>
+    </form>
+</body>
+</html>
