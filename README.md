@@ -69,6 +69,3 @@ madlibs generator/
 
 See `requirements.txt` for all dependencies.
 
-## License
-
-MIT License (add your own if needed)
