@@ -1,4 +1,5 @@
 import sqlite3, json
+import random
 
 
 def get_connection():
@@ -8,13 +9,14 @@ def get_connection():
 def get_random_story():
     connection=get_connection()
     cur=connection.cursor()
+    randomId=random.randint(1,28)
 
     query='''SELECT id, story_text, placeholders
             FROM madlib_stories 
-            ORDER BY RANDOM()
+            WHERE id=?
             LIMIT 1'''
     
-    cur.execute(query)
+    cur.execute(query,(randomId,))
     result=cur.fetchone()
     cur.close()
     connection.close()
@@ -56,7 +58,10 @@ def fill_story(story:str,inputs:dict):
 def get_placeholder_names(placeholders:list):
     names=[]
     for placeholder in placeholders:
-        names.append(placeholder["placeholder"])
+        current=placeholder["placeholder"].replace("_"," ")
+        names.append(current)
+    #removing duplicates
+    names=list(set(names))
     
     return names
 

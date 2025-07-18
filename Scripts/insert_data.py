@@ -11,7 +11,7 @@ def get_all_stories():
     stories=[]
     for story in storyNames:
         storyPath="stories/"+story
-        with open(storyPath,"r") as f:
+        with open(storyPath,"r",encoding="utf-8") as f:
             text=f.read()
             stories.append(text)
         
