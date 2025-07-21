@@ -51,6 +51,7 @@ def get_story_by_id(id):
 
 def fill_story(story:str,inputs:dict):
     for key,value in inputs.items():
+        story=story.replace("_"," ")
         story=story.replace("{"+key+"}",value)
     
     return story
